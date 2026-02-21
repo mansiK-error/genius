@@ -1,18 +1,24 @@
 *{
+
 margin:0;
 padding:0;
 box-sizing:border-box;
+
 font-family:Segoe UI, sans-serif;
+
 }
+
 
 body{
 
 height:100vh;
+
 display:flex;
+
 justify-content:center;
 align-items:center;
 
-/* premium animated gradient */
+/* animated gradient */
 
 background: linear-gradient(-45deg,
 #ff6ec4,
@@ -23,11 +29,12 @@ background: linear-gradient(-45deg,
 
 background-size:400% 400%;
 
-animation: gradientMove 12s ease infinite;
+animation:bgMove 12s ease infinite;
 
 }
 
-@keyframes gradientMove{
+
+@keyframes bgMove{
 
 0%{background-position:0% 50%;}
 50%{background-position:100% 50%;}
@@ -36,13 +43,14 @@ animation: gradientMove 12s ease infinite;
 }
 
 
+
 /* glass card */
 
 .card{
 
-background: rgba(255,255,255,0.15);
+background:rgba(255,255,255,0.15);
 
-backdrop-filter: blur(18px);
+backdrop-filter:blur(20px);
 
 padding:30px 40px;
 
@@ -54,25 +62,29 @@ color:white;
 
 box-shadow:0 10px 40px rgba(0,0,0,0.3);
 
-animation: fadeIn 0.6s ease;
+animation:fadeIn 0.6s ease;
 
 }
+
 
 @keyframes fadeIn{
 
 from{
+
 opacity:0;
 transform:translateY(30px);
+
 }
+
 to{
+
 opacity:1;
 transform:translateY(0);
-}
 
 }
 
+}
 
-/* hide class */
 
 .hidden{
 
@@ -81,13 +93,63 @@ display:none;
 }
 
 
+
+/* text */
+
+.text{
+
+margin:15px 0;
+
+font-size:18px;
+
+}
+
+.note{
+
+margin:10px 0;
+
+font-size:14px;
+
+opacity:0.9;
+
+}
+
+
+
+/* input */
+
+input{
+
+padding:10px;
+
+border:none;
+
+border-radius:10px;
+
+outline:none;
+
+margin-top:10px;
+
+width:100%;
+
+}
+
+
+
 /* buttons */
+
+.btnBox{
+
+margin-top:15px;
+
+}
+
 
 button{
 
 padding:12px 25px;
 
-margin:12px;
+margin:10px;
 
 border:none;
 
@@ -97,47 +159,73 @@ font-size:16px;
 
 cursor:pointer;
 
-transition: all 0.3s ease;
+transition:0.3s;
 
 }
 
 
-/* YES button */
+.yesBtn{
 
-button:first-of-type{
-
-background: linear-gradient(45deg,#00c853,#64dd17);
+background:linear-gradient(45deg,#00c853,#64dd17);
 
 color:white;
-
-box-shadow:0 4px 15px rgba(0,200,83,0.5);
 
 }
 
 
-/* NO button */
+.noBtn{
 
-button:last-of-type{
-
-background: linear-gradient(45deg,#ff1744,#ff616f);
+background:linear-gradient(45deg,#ff1744,#ff616f);
 
 color:white;
-
-box-shadow:0 4px 15px rgba(255,23,68,0.5);
 
 }
 
 
 button:hover{
 
-transform: scale(1.1);
+transform:scale(1.1);
 
 }
 
 
-/* QR image */
 
-img{
+/* progress bar */
+
+.progressBox{
+
+width:100%;
+
+height:20px;
+
+background:rgba(255,255,255,0.2);
+
+border-radius:10px;
+
+margin-top:15px;
+
+}
+
+
+.progress{
+
+width:0%;
+
+height:100%;
+
+background:lime;
+
+border-radius:10px;
+
+}
+
+
+
+/* QR */
+
+.qr{
+
+width:220px;
 
 margin-top:20px;
 
@@ -145,6 +233,15 @@ border-radius:15px;
 
 box-shadow:0 5px 25px rgba(0,0,0,0.4);
 
-animation: fadeIn 0.8s ease;
+}
+
+
+.payText{
+
+margin-top:10px;
+
+font-size:14px;
+
+opacity:0.9;
 
 }
