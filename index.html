@@ -1,46 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Genius Test</title>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Genius Test 😎</title>
 
-<body style="background:black;color:white;text-align:center;">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+<!-- Main Card -->
+
+<div class="card" id="card">
 
 <h1>🧠 Genius Level Test</h1>
 
-<p>Aapko kya lgta hai aap Genius ho?</p>
+<p>
+Aapko kya lgta hai aap Genius ho? 🤔
+</p>
 
-<button onclick="showQR()">YES 😎</button>
+<p>
+📌 If YES then click YES for next surprise 🎁
+</p>
 
-<button id="noBtn">NO 🤭</button>
+<button onclick="revealQR()">
+YES 😎
+</button>
 
-<div id="qr" style="display:none;">
-
-<h2>Proof kro to... Send sagun 😌</h2>
-
-<img src="paytmQR.jpeg" width="200">
+<button id="noBtn">
+NO 🤭
+</button>
 
 </div>
 
-<script>
 
-document.getElementById("noBtn").onmouseover=function(){
 
-this.style.position="relative";
+<!-- QR Card -->
 
-this.style.left=(Math.random()*200-100)+"px";
+<div class="card hidden" id="qrCard">
 
-this.style.top=(Math.random()*200-100)+"px";
+<h2>
+😌 Proof kro to... QR diya hua h
+</h2>
 
-}
+<img src="paytmQR.jpeg" width="220">
 
-function showQR(){
+<p>
+Minimum ₹21 ya ₹51 - Genius Tax 💸
+</p>
 
-document.getElementById("qr").style.display="block";
+</div>
 
-}
 
-</script>
+<script src="script.js"></script>
+
 
 </body>
 </html>
