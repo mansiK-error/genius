@@ -1,0 +1,52 @@
+body{
+
+margin:0;
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-family:Arial;
+
+background: linear-gradient(-45deg,
+#ff6ec4,
+#7873f5,
+#42e695,
+#00c9ff);
+
+background-size:400% 400%;
+animation:bg 10s infinite alternate;
+
+}
+
+@keyframes bg{
+
+0%{background-position:0% 50%;}
+100%{background-position:100% 50%;}
+
+}
+
+.card{
+
+background: rgba(255,255,255,0.2);
+padding:30px;
+border-radius:15px;
+text-align:center;
+
+}
+
+.hidden{
+
+display:none;
+
+}
+
+button{
+
+padding:10px 20px;
+margin:10px;
+font-size:16px;
+cursor:pointer;
+
+}
