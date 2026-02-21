@@ -1,37 +1,150 @@
-body {
-
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI, sans-serif;
+}
+
+body{
+
 height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
 
-background: linear-gradient(45deg, red, blue, green, purple);
+/* premium animated gradient */
 
-font-family: Arial;
-color:white;
+background: linear-gradient(-45deg,
+#ff6ec4,
+#7873f5,
+#42e695,
+#00c9ff,
+#f7971e);
+
+background-size:400% 400%;
+
+animation: gradientMove 12s ease infinite;
 
 }
 
-.card {
+@keyframes gradientMove{
 
-background:black;
-padding:20px;
-border-radius:10px;
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+
+/* glass card */
+
+.card{
+
+background: rgba(255,255,255,0.15);
+
+backdrop-filter: blur(18px);
+
+padding:30px 40px;
+
+border-radius:20px;
+
 text-align:center;
 
+color:white;
+
+box-shadow:0 10px 40px rgba(0,0,0,0.3);
+
+animation: fadeIn 0.6s ease;
+
 }
 
-.hidden {
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+
+/* hide class */
+
+.hidden{
 
 display:none;
 
 }
 
-button {
 
-padding:10px;
-margin:10px;
+/* buttons */
+
+button{
+
+padding:12px 25px;
+
+margin:12px;
+
+border:none;
+
+border-radius:12px;
+
+font-size:16px;
+
 cursor:pointer;
+
+transition: all 0.3s ease;
+
+}
+
+
+/* YES button */
+
+button:first-of-type{
+
+background: linear-gradient(45deg,#00c853,#64dd17);
+
+color:white;
+
+box-shadow:0 4px 15px rgba(0,200,83,0.5);
+
+}
+
+
+/* NO button */
+
+button:last-of-type{
+
+background: linear-gradient(45deg,#ff1744,#ff616f);
+
+color:white;
+
+box-shadow:0 4px 15px rgba(255,23,68,0.5);
+
+}
+
+
+button:hover{
+
+transform: scale(1.1);
+
+}
+
+
+/* QR image */
+
+img{
+
+margin-top:20px;
+
+border-radius:15px;
+
+box-shadow:0 5px 25px rgba(0,0,0,0.4);
+
+animation: fadeIn 0.8s ease;
 
 }
