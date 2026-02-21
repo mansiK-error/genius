@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Genius Test 😎</title>
+<title>Genius Scanner 😎</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -11,51 +11,83 @@
 <body>
 
 
-<!-- Main Card -->
+<!-- MAIN CARD -->
 
 <div class="card" id="card">
 
-<h1>🧠 Genius Level Test</h1>
+<h1>🧠 Genius Level Scanner</h1>
 
-<p>
+<p class="text">
 Aapko kya lgta hai aap Genius ho? 🤔
 </p>
 
-<p>
+<input 
+type="text" 
+id="nameInput" 
+placeholder="Enter your name Genius ji 😌"
+>
+
+<p class="note">
 📌 If YES then click YES for next surprise 🎁
 </p>
 
-<button onclick="revealQR()">
+<div class="btnBox">
+
+<button class="yesBtn" onclick="startScan()">
 YES 😎
 </button>
 
-<button id="noBtn">
+<button class="noBtn" id="noBtn">
 NO 🤭
 </button>
 
 </div>
 
+</div>
 
 
-<!-- QR Card -->
+
+<!-- SCANNER CARD -->
+
+<div class="card hidden" id="scanCard">
+
+<h2 id="scanText">
+Scanning Genius Level... 0%
+</h2>
+
+<div class="progressBox">
+
+<div class="progress" id="progress"></div>
+
+</div>
+
+</div>
+
+
+
+<!-- QR CARD -->
 
 <div class="card hidden" id="qrCard">
 
-<h2>
-😌 Proof kro to... QR diya hua h
-</h2>
+<h2 id="resultText"></h2>
 
-<img src="paytmQR.jpeg" width="220">
+<a id="upiLink">
 
-<p>
-Minimum ₹21 ya ₹51 - Genius Tax 💸
+<img 
+src="paytmQR.jpeg" 
+class="qr"
+>
+
+</a>
+
+<p class="payText">
+Tap QR to pay Genius Tax 💸
 </p>
 
 </div>
 
 
 <script src="script.js"></script>
-
 
 </body>
 </html>
