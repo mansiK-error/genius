@@ -4,35 +4,26 @@ const noBtn = document.getElementById("noBtn");
 
 if(noBtn){
 
-noBtn.addEventListener("mouseover", moveButton);
-noBtn.addEventListener("click", moveButton);
+noBtn.addEventListener("mouseover", function(){
+
+noBtn.style.position="relative";
+
+noBtn.style.left =
+(Math.random()*200-100)+"px";
+
+noBtn.style.top =
+(Math.random()*200-100)+"px";
+
+});
 
 }
 
 });
 
-function moveButton(){
-
-const noBtn = document.getElementById("noBtn");
-
-const x = Math.random()*200 - 100;
-const y = Math.random()*200 - 100;
-
-noBtn.style.transform =
-`translate(${x}px, ${y}px)`;
-
-}
-
 function revealQR(){
 
-const card = document.getElementById("card");
-const qrCard = document.getElementById("qrCard");
+document.getElementById("card").style.display="none";
 
-if(card && qrCard){
-
-card.classList.add("hidden");
-qrCard.classList.remove("hidden");
-
-}
+document.getElementById("qrCard").style.display="block";
 
 }
