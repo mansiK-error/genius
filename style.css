@@ -1,11 +1,8 @@
 *{
-
 margin:0;
 padding:0;
 box-sizing:border-box;
-
 font-family:Segoe UI, sans-serif;
-
 }
 
 
@@ -14,22 +11,18 @@ body{
 height:100vh;
 
 display:flex;
-
 justify-content:center;
 align-items:center;
 
-/* animated gradient */
-
 background: linear-gradient(-45deg,
-#ff6ec4,
-#7873f5,
-#42e695,
 #00c9ff,
-#f7971e);
+#92fe9d,
+#ff6ec4,
+#7873f5);
 
 background-size:400% 400%;
 
-animation:bgMove 12s ease infinite;
+animation:bgMove 10s infinite;
 
 }
 
@@ -43,123 +36,118 @@ animation:bgMove 12s ease infinite;
 }
 
 
-
-/* glass card */
+/* CARD */
 
 .card{
 
-background:rgba(255,255,255,0.15);
+background:rgba(255,255,255,0.35);
 
-backdrop-filter:blur(20px);
+backdrop-filter:blur(15px);
 
-padding:30px 40px;
+padding:35px;
 
 border-radius:20px;
 
 text-align:center;
 
-color:white;
-
 box-shadow:0 10px 40px rgba(0,0,0,0.3);
 
-animation:fadeIn 0.6s ease;
+max-width:350px;
 
 }
 
 
-@keyframes fadeIn{
+/* TITLES */
 
-from{
+.mainTitle{
 
-opacity:0;
-transform:translateY(30px);
+font-size:30px;
+font-weight:800;
+color:#111;
 
-}
-
-to{
-
-opacity:1;
-transform:translateY(0);
+margin-bottom:10px;
 
 }
 
-}
-
-
-.hidden{
-
-display:none;
-
-}
-
-
-
-/* text */
 
 .text{
 
-margin:15px 0;
+font-size:22px;
+font-weight:600;
+color:#111;
 
-font-size:18px;
+margin-bottom:10px;
 
 }
+
 
 .note{
 
-margin:10px 0;
-
-font-size:14px;
-
-opacity:0.9;
-
-}
-
-
-
-/* input */
-
-input{
-
-padding:10px;
-
-border:none;
-
-border-radius:10px;
-
-outline:none;
+font-size:18px;
+font-weight:600;
+color:#222;
 
 margin-top:10px;
 
+}
+
+
+/* RESULT TEXT */
+
+.resultText{
+
+font-size:24px;
+font-weight:800;
+
+color:#111;
+
+background:rgba(255,255,255,0.6);
+
+padding:12px;
+
+border-radius:12px;
+
+margin-bottom:15px;
+
+}
+
+
+/* INPUT */
+
+input{
+
+padding:12px;
+
+font-size:18px;
+
+border-radius:10px;
+
+border:none;
+
 width:100%;
 
-}
-
-
-
-/* buttons */
-
-.btnBox{
-
-margin-top:15px;
+margin-top:10px;
 
 }
 
+
+/* BUTTONS */
 
 button{
 
 padding:12px 25px;
 
-margin:10px;
+font-size:20px;
+
+font-weight:700;
 
 border:none;
 
 border-radius:12px;
 
-font-size:16px;
+margin:10px;
 
 cursor:pointer;
-
-transition:0.3s;
 
 }
 
@@ -167,7 +155,6 @@ transition:0.3s;
 .yesBtn{
 
 background:linear-gradient(45deg,#00c853,#64dd17);
-
 color:white;
 
 }
@@ -176,29 +163,19 @@ color:white;
 .noBtn{
 
 background:linear-gradient(45deg,#ff1744,#ff616f);
-
 color:white;
 
 }
 
 
-button:hover{
-
-transform:scale(1.1);
-
-}
-
-
-
-/* progress bar */
+/* PROGRESS */
 
 .progressBox{
 
 width:100%;
-
 height:20px;
 
-background:rgba(255,255,255,0.2);
+background:#ddd;
 
 border-radius:10px;
 
@@ -209,9 +186,8 @@ margin-top:15px;
 
 .progress{
 
-width:0%;
-
 height:100%;
+width:0%;
 
 background:lime;
 
@@ -220,28 +196,30 @@ border-radius:10px;
 }
 
 
-
 /* QR */
 
 .qr{
 
 width:220px;
 
-margin-top:20px;
-
-border-radius:15px;
-
-box-shadow:0 5px 25px rgba(0,0,0,0.4);
+margin-top:15px;
 
 }
 
 
 .payText{
 
-margin-top:10px;
+font-size:20px;
+font-weight:700;
+color:#111;
 
-font-size:14px;
+}
 
-opacity:0.9;
+
+/* HIDDEN */
+
+.hidden{
+
+display:none;
 
 }
