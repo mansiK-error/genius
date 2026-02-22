@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Genius Scanner 😎</title>
+
+<title>Personality Level Scanner</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -15,15 +16,17 @@
 
 <div class="card" id="card">
 
-<h1>🧠 Genius Level Scanner</h1>
+<h1 class="mainTitle">
+🧠 Personality Level Scanner
+</h1>
 
 <p class="text">
 Aapko kya lgta hai aap Genius ho? 🤔
 </p>
 
-<input 
-type="text" 
-id="nameInput" 
+<input
+type="text"
+id="nameInput"
 placeholder="Enter your name Genius ji 😌"
 >
 
@@ -51,14 +54,12 @@ NO 🤭
 
 <div class="card hidden" id="scanCard">
 
-<h2 id="scanText">
-Scanning Genius Level... 0%
+<h2 id="scanText" class="resultText">
+Scanning Personality Level... 0%
 </h2>
 
 <div class="progressBox">
-
 <div class="progress" id="progress"></div>
-
 </div>
 
 </div>
@@ -69,19 +70,16 @@ Scanning Genius Level... 0%
 
 <div class="card hidden" id="qrCard">
 
-<h2 id="resultText"></h2>
+<h2 id="resultText" class="resultText"></h2>
 
 <a id="upiLink">
 
-<img 
-src="paytmQR.jpeg" 
-class="qr"
->
+<img src="paytmQR.jpeg" class="qr">
 
 </a>
 
 <p class="payText">
-Tap QR to pay Genius Tax 💸
+Tap QR to pay Dakshina 💸
 </p>
 
 </div>
