@@ -1,16 +1,14 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-const noBtn=document.getElementById("noBtn");
-
-/* NO button runs away */
+let noBtn=document.getElementById("noBtn");
 
 noBtn.addEventListener("mouseover", function(){
 
 noBtn.style.position="relative";
 
-noBtn.style.left=(Math.random()*300-150)+"px";
+noBtn.style.left=(Math.random()*200-100)+"px";
 
-noBtn.style.top=(Math.random()*200-100)+"px";
+noBtn.style.top=(Math.random()*150-75)+"px";
 
 });
 
@@ -29,11 +27,11 @@ let interval=setInterval(function(){
 
 percent++;
 
-document.getElementById("scanText")
-.innerText="Scanning Genius Level... "+percent+"%";
+document.getElementById("scanText").innerText=
+"Scanning Personality Level... "+percent+"%";
 
-document.getElementById("progress")
-.style.width=percent+"%";
+document.getElementById("progress").style.width=
+percent+"%";
 
 if(percent>=100){
 
@@ -52,61 +50,60 @@ function showResult(){
 
 let name=document.getElementById("nameInput").value;
 
-if(name=="") name="Genius";
+if(name=="") name="Aap";
 
 document.getElementById("scanCard").classList.add("hidden");
 
 document.getElementById("qrCard").classList.remove("hidden");
 
-document.getElementById("resultText")
-.innerText="✅ "+name+" is 100% Genius 😎 Proof required.";
 
-launchConfetti();
+document.getElementById("resultText").innerText=
+"वाह! "+name+" आप तो 100% ज्ञानी और Genius हैं 😎\nचलिए अब QR पर दक्षिणा भेज दीजिए हमें 💸";
+
 
 setupUPI();
+
+confetti();
 
 }
 
 
-/* YOUR REAL PAYTM UPI SETUP */
+/* UPI SETUP */
 
 function setupUPI(){
 
 let upi="7858980950@pthdfc";
 
-let amount="51";
-
-let note="Genius Tax 😎";
-
 let link=
-`upi://pay?pa=${upi}&pn=Genius&am=${amount}&tn=${note}&cu=INR`;
+"upi://pay?pa="+upi+"&pn=Mansi&cu=INR";
 
 document.getElementById("upiLink").href=link;
 
 }
 
 
-/* Confetti */
+/* CONFETTI */
 
-function launchConfetti(){
+function confetti(){
 
-for(let i=0;i<100;i++){
+for(let i=0;i<80;i++){
 
 let el=document.createElement("div");
 
 el.style.position="fixed";
+
 el.style.width="8px";
 el.style.height="8px";
 
-el.style.background=
-`hsl(${Math.random()*360},100%,50%)`;
+el.style.background="hsl("+Math.random()*360+",100%,50%)";
 
 el.style.left=Math.random()*100+"vw";
+
 el.style.top="-10px";
 
 document.body.appendChild(el);
 
-let fall=setInterval(()=>{
+let fall=setInterval(function(){
 
 let top=parseInt(el.style.top);
 
@@ -119,7 +116,7 @@ el.remove();
 
 el.style.top=top+5+"px";
 
-},15);
+},20);
 
 }
 
